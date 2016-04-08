@@ -1,0 +1,286 @@
+@import "compass/reset";
+@import "compass/css3";
+
+$color-gray: #d1d1d1;
+$color-green: #00b38a;
+$font-family: 'Helvetica Neue', Helvetica, Aria, "Microsoft YaHei", sans-serif;
+::-webkit-scrollbar {
+    background-color: #f1f1f1;
+    overflow: visible;
+    width: 3px;
+    height: 3px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .2);
+    background-clip: padding-box;
+    min-height: 15px;
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
+}
+::-webkit-scrollbar-thumb:vertical:hover {
+    background-color: rgba(0, 0, 0, .3);
+}
+::-webkit-scrollbar-thumb:vertical:active {
+    background-color: rgba(0, 0, 0, .5);
+}
+::-webkit-scrollbar-button {
+    height: 0;
+    width: 0;
+}
+::-webkit-scrollbar-track {
+    background-clip: padding-box;
+    border: solid transparent;
+    border-width: 0 0 0 4px;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+::selection {
+    background: $color-gray;
+}
+::-moz-selection {
+    background: $color-gray;
+}
+
+.kill-ie {
+    margin: 0;
+    padding: .5em 0;
+    color: #333;
+    text-align: center;
+    background: #fff8e2;
+}
+* {
+    @include box-sizing(border-box);
+}
+body {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: $font-family;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    background-color: #eee;
+}
+a {
+    text-decoration: none;
+    @include transition(all .2s ease-in-out);
+}
+.content {
+    width: 1024px;
+    margin: 50px auto;
+    @include border-radius(5px);
+    @include box-shadow(0 0 15px #c0c0c0);
+    background-color: #fff;
+    overflow: hidden;
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        margin: 0;
+        @include border-radius(0);
+    }
+}
+.content-hd {
+    width: 100%;
+    padding: 25px 50px;
+    color: #fff;
+    background-color: $color-green;
+    overflow: hidden;
+    .title {
+        width: 100%;
+        border-bottom: 2px solid darken($color-green, 2%);
+        font-size: 50px;
+        font-weight: 300;
+        overflow: hidden;
+    }
+    .name,
+    .job,
+    .info,
+    .contact {
+        width: 50%;
+    }
+    .name {
+        float: left;
+        h1 {
+            font-weight: 500;
+            letter-spacing: 5px;
+            small {
+                font-weight: 400;
+                letter-spacing: 0;
+                font-size: 24px;
+                padding-left: 10px;
+            }
+        }
+    }
+    .job {
+        float: right;
+        text-align: right;
+        h2 {
+            display: inline-block;
+            font-size: 24px;
+        }
+    }
+    .info {
+        float: left;
+        line-height: 1.8;
+        padding-left: 5px;
+        h2 {
+            margin: 8px 0 4px;
+            font-size: 18px;
+        }
+        h3 {
+            font-size: 16px;
+        }
+    }
+    .contact {
+        float: right;
+        text-align: right;
+        padding-right: 5px;
+        ul {
+            margin-top: 8px;
+            &>li {
+                height: 22px;
+                &>a {
+                    color: #fff;
+                    font-family: Monaco, $font-family;
+                    line-height: 22px;
+                    &:hover {
+                        color: #eee;
+                    }
+                    .iconfont {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+.content-bd {
+    width: 100%;
+    min-height: 200px;
+    padding: 20px 25px 40px;
+    overflow: hidden;
+    .content-left,
+    .content-right {
+        width: 50%;
+    }
+    .content-left {
+        float: left;
+    }
+    .content-right {
+        float: right;
+    }
+    section {
+        overflow: hidden;
+        padding: 10px 15px;
+    }
+    .section-hd {
+        position: relative;
+        height: 32px;
+        margin: 10px auto 5px;
+        overflow: hidden;
+    }
+    .section-bd {
+        overflow: hidden;
+    }
+    .section-title-l,
+    .section-title-r {
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        width: 35%;
+        height: 0;
+        vertical-align: middle;
+        border-top: 1px solid #ededed;
+    }
+    .section-title-l {
+        left: 0;
+    }
+    .section-title-r {
+        right: 0;
+    }
+    .section-title {
+        position: relative;
+        z-index: 1;
+        width: 24%;
+        min-width: 100px;
+        margin: 0 auto;
+        padding: 4px 10px;
+        @include border-radius(32px);
+        font-size: 16px;
+        text-align: center;
+        background-color: #eee;
+    }
+    .section-list {
+        padding: 10px 0 5px;
+    }
+    .item-hd {
+        padding: 10px 0 5px;
+        height: 35px;
+        line-height: 20px;
+        overflow: hidden;
+        font-weight: 500;
+        .item-time {
+            display: inline-block;
+            float: left;
+            width: 25%;
+        }
+        .item-name {
+            display: inline-block;
+            float: left;
+        }
+        .item-more {
+            float: right;
+        }
+    }
+    .item-bd {
+        margin-bottom: 5px;
+    }
+    .section-content {
+        text-align: justify;
+        word-break: break-all;
+        line-height: 22px;
+        .iconfont {
+            color: $color-green;
+        }
+        strong {
+            display: inline-block;
+            font-family: Menlo, $font-family;
+            font-size: 12px;
+            line-height: 14px;
+            border: 1px solid $color-gray;
+            @include border-radius(3px);
+            margin: 2px;
+            padding: 0 3px;
+            background-color: #f7f7f7;
+        }
+    }
+    .skill {
+        .section-content {
+            margin-bottom: 5px;
+        }
+    }
+    .practice {
+        .item-time {
+            width: 35%;
+        }
+    }
+    .prize {
+        .item-time {
+            width: 15%;
+        }
+    }
+}
+.btn {
+    display: inline-block;
+    padding: 0 5px;
+    border: 1px solid $color-green;
+    border-radius: 3px;
+    color: $color-green;
+    font-family: Menlo, $font-family;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    &:hover {
+        color: #fff;
+        background-color: $color-green;
+    }
+}
