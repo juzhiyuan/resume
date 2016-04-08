@@ -347,6 +347,19 @@ a {
         background-color: $color-green;
     }
 }
+.pdf {
+    display: inline-block;
+    position: fixed;
+    z-index: 10;
+    bottom: 7px;
+    right: 7px;
+    padding: 0 7px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: $color-green;
+}
 footer {
     text-align: center;
     .footer-link {

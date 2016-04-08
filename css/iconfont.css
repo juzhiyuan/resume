@@ -20,3 +20,5 @@
 .icon-github:before { content: "\e600"; }
 .icon-email:before { content: "\e606"; }
 .icon-phone:before { content: "\e601"; }
+.icon-link:before { content: "\e602"; }
+.icon-pdf:before { content: "\e607"; }
