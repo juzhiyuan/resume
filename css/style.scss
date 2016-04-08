@@ -196,8 +196,11 @@ a {
 .content-bd {
     width: 100%;
     min-height: 200px;
-    padding: 20px 25px 40px;
+    padding: 20px 30px 40px;
     overflow: hidden;
+    @media screen and (max-width: 720px) {
+        padding: 20px 20px 40px;
+    }
     .content-left,
     .content-right {
         width: 50%;
