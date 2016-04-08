@@ -347,3 +347,11 @@ a {
         background-color: $color-green;
     }
 }
+footer {
+    text-align: center;
+    .footer-link {
+        display: inline-block;
+        color: $color-gray;
+        margin-bottom: 25px;
+    }
+}
