@@ -196,10 +196,10 @@ a {
 .content-bd {
     width: 100%;
     min-height: 200px;
-    padding: 20px 30px 40px;
+    padding: 20px 30px 50px;
     overflow: hidden;
     @media screen and (max-width: 720px) {
-        padding: 20px 20px 40px;
+        padding: 20px 20px 50px;
     }
     .content-left,
     .content-right {
@@ -264,6 +264,9 @@ a {
         line-height: 20px;
         overflow: hidden;
         font-weight: 500;
+        .iconfont {
+            color: $color-green;
+        }
         .item-time {
             display: inline-block;
             float: left;
@@ -276,6 +279,7 @@ a {
         }
         .item-more {
             float: right;
+            margin-left: 5px;
             @media screen and (max-width: 720px) {
                 position: absolute;
                 top: 10px;
@@ -298,7 +302,7 @@ a {
         .iconfont {
             color: $color-green;
         }
-        strong {
+        em {
             display: inline-block;
             font-family: Menlo, $font-family;
             font-size: 12px;
@@ -309,10 +313,28 @@ a {
             padding: 0 3px;
             background-color: #f7f7f7;
         }
+        strong {
+            display: inline-block;
+            font-family: $font-family;
+            font-size: 12px;
+            line-height: 14px;
+            border: 1px solid #f3f3f3;
+            @include border-radius(3px);
+            font-weight: 500;
+            color: #555;
+            margin: 2px;
+            padding: 0 3px;
+            background-color: #f6f6f6;
+        }
     }
     .skill {
         .section-content {
             margin-bottom: 5px;
+            line-height: 24px;
+        }
+        strong {
+            display: inline;
+            line-height: 18px;
         }
     }
     .practice {
@@ -324,6 +346,9 @@ a {
         }
     }
     .prize {
+        .item-hd {
+            padding: 12px 0 0;
+        }
         .item-time {
             width: 15%;
             @media screen and (max-width: 720px) {
