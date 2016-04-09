@@ -4,6 +4,7 @@
 $color-gray: #d1d1d1;
 $color-green: #00b38a;
 $font-family: 'Helvetica Neue', Helvetica, Aria, "Microsoft YaHei", sans-serif;
+
 ::-webkit-scrollbar {
     background-color: #f1f1f1;
     overflow: visible;
@@ -60,12 +61,14 @@ body {
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: none;
     background-color: #eee;
+    overflow: auto;
 }
 a {
     text-decoration: none;
     @include transition(all .2s ease-in-out);
 }
 .content {
+    position: relative;
     width: 1024px;
     margin: 50px auto;
     @include border-radius(5px);
@@ -112,6 +115,8 @@ a {
             letter-spacing: 5px;
             @media screen and (max-width: 720px) {
                 letter-spacing: 0;
+                line-height: 1.25;
+                margin-top: 10px;
             }
             small {
                 font-weight: 400;
@@ -121,7 +126,8 @@ a {
                 @media screen and (max-width: 720px) {
                     display: block;
                     padding-left: 0;
-                    font-size: 22px;
+                    font-size: 20px;
+                    line-height: 1;
                 }
             }
         }
