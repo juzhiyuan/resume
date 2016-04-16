@@ -382,14 +382,20 @@ a {
     display: inline-block;
     position: fixed;
     z-index: 10;
-    bottom: 8px;
-    right: 8px;
+    bottom: 6px;
+    left: 50%;
+    margin-left: 520px;
     padding: 0 8px;
     border-radius: 3px;
     color: #fff;
     font-size: 16px;
     line-height: 26px;
     background-color: $color-green;
+    @media screen and (max-width: 1246px) {
+        left: auto;
+        right: 8px;
+        margin-left: 0;
+    }
 }
 footer {
     text-align: center;
