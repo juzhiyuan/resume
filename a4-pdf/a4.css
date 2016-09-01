@@ -1,12 +1,19 @@
 .a4 .content {
 	width: 970px;
+	height: 1372px;
 	margin: 0 auto;
 	-moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
 }
+.a4 .content-left{
+	width: 52%;
+}
+.a4 .content-right{
+	width: 48%;
+}
 .a4 .content-hd {
-	padding: 50px 50px 40px;
+	padding: 60px 50px 40px;
 }
 .a4 .content-hd .title {
     font-size: 56px;
@@ -42,11 +49,15 @@
     padding: 25px 30px 50px;
 }
 .a4 .content-bd .item-hd {
-	padding: 13px 0 8px;
+	padding: 10px 0 8px;
 }
 .a4 .content-bd .project .item-hd {
 	padding: 10px 0 6px;
-} 
+}
+.a4 .content-bd .practice .item-bd,
+.a4 .content-bd .project .item-bd {
+	margin-bottom: 0;
+}
 .a4 .content-bd .prize .item-hd {
 	padding: 11px 0 5px;
 } 
@@ -63,14 +74,15 @@
     line-height: 1.75 !important;
 }
 .a4 .project {
-	padding-top: 0 !important;
+	padding-top: 5px !important;
 }
 .a4 .pdf {
 	display: none;
 }
 .a4 .footer-link {
 	position: absolute;
-	right: 40px;
-	bottom: 10px;
+	right: 45px;
+	bottom: 20px;
+	color: #ccc;
 	display: inline-block;
 }
