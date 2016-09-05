@@ -45,7 +45,7 @@ a {
 }
 .content-hd {
     width: 100%;
-    padding: 25px 50px;
+    padding: 30px 50px;
     color: #fff;
     background-color: $color-green;
     overflow: hidden;
@@ -55,9 +55,11 @@ a {
     .title {
         width: 100%;
         border-bottom: 2px solid darken($color-green, 2%);
-        font-size: 50px;
+        font-size: 52px;
         font-weight: 300;
         overflow: hidden;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
     }
     .name,
     .job,
