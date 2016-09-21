@@ -2,6 +2,8 @@
 
 * http://resume.congm.in
 
+> chrome浏览器 "打印" 设置无边距可导出
+
 Fork或借鉴请注明出处 [@ Cong Min](https://congm.in)
 
 ![闵聪-简历](https://raw.githubusercontent.com/mcc108/resume/master/resume.jpg)
