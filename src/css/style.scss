@@ -24,10 +24,27 @@ body {
     -webkit-text-size-adjust: none;
     background-color: #eee;
     overflow: auto;
+    padding-top: 5px;
+    @media screen and (max-width: 1024px) {
+        padding-top: 0;
+    }
 }
 a {
     text-decoration: none;
     @include transition(all .2s ease-in-out);
+}
+.last-modified{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    width: 1000px;
+    color: #bbb;
+    margin-left: -500px;
+    font-size: 12px;
+    text-align: right;
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
 }
 .content {
     position: relative;
