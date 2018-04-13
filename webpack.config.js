@@ -1,52 +1,76 @@
 /* webpack.config.js
  * @ Cong Min
  */
-var webpack = require('webpack'),
-    ExtractTextPlugin = require('extract-text-webpack-plugin'),
-    HtmlPlugin = require('html-webpack-plugin');
+// const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
     entry: {
         app: ['./src/entry.js']
     },
     output: {
-        path: './static',
-        filename: '[name].js?[chunkhash:8]',
-        publicPath: "static/"
+        filename: 'static/[name].js?[hash:6]',
+        path: path.resolve(__dirname)
+    },
+    devServer: {
+        contentBase: path.resolve(__dirname)
     },
     plugins: [
-        new HtmlPlugin({
+        // new webpack.HotModuleReplacementPlugin(),
+        new HtmlWebpackPlugin({
             template: './src/index.html',
-            filename: '../index.html',
-            chunks: ['app'],
-            inject: 'body'
-        }),
-        new ExtractTextPlugin('[name].css?[contenthash:8]'),
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"production"'
-            }
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
+            filename: 'index.html',
+            minify: {
+                collapseWhitespace: true,
+                minifyJS: true,
+                minifyCSS: true
             }
         })
     ],
     module: {
-        loaders: [{
-            test: /\.html$/, loader: 'html'
-        },  {
-            test: /\.scss$/, exclude: /node_modules/, loader: ExtractTextPlugin.extract(['css', 'sass'])
-        },  {
-            test: /\.css$/, loader: ExtractTextPlugin.extract(['css'])
-        },  {
-            test: /\.(png|jpg|gif)$/, loaders: [ 'url?limit=8192&name=img/[name].[ext]?[hash:8]', 'image-webpack' ]
-        },  {
-            test: /\.(eot|woff|woff2|ttf|svg)$/, loader: 'url', query: { limit: 8192, prefix: 'font/', name: 'font/[name].[ext]?[hash:8]' }
-        }],
-        resolve: {
-            extensions: ['', '.js']
-        }
+        rules: [
+            {
+                test: /\.html$/,
+                use: 'html-loader'
+            },
+            {
+                test: /\.(less|css)$/,
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader?minimize' },
+                    { loader: 'postcss-loader' },
+                    { loader: 'less-loader' }
+                ]
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192,
+                            name: 'static/[name].[ext]?[hash:6]'
+                        }
+                    },
+                    { // 压缩图片：https://github.com/tcoopman/image-webpack-loader
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 8192,
+                        name: 'static/[name].[ext]?[hash:6]'
+                    }
+                }
+            }
+        ]
     }
 };
