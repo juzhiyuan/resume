@@ -21,6 +21,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html',
             filename: 'index.html',
+            inject: 'head',
             minify: {
                 collapseWhitespace: true,
                 minifyJS: true,
