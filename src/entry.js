@@ -1,2 +1,1 @@
-require('./css/style.scss');
-require('./css/iconfont.css');
+require('./css/style.less');
