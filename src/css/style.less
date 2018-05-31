@@ -1,10 +1,10 @@
-@color-main: #00b38a; // 主色
+@color-main: #1d9dd0; // 主色
 @font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif; // 普通字体
 @font-family-title: 'Lucida Grande', 'Hiragino Sans GB', 'Hiragino Sans GB W3', @font-family; // 标题字体
 
 .kill-ie {
     margin: 0;
-    padding: .5em 0;
+    padding: 0.5em 0;
     color: #333;
     text-align: center;
     background: #fff8e2;
@@ -13,6 +13,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     position: relative;
     -webkit-font-smoothing: antialiased;
@@ -28,10 +29,12 @@ body {
         padding-top: 0;
     }
 }
+
 a {
     text-decoration: none;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
+
 .last-modified {
     position: absolute;
     top: 30px;
@@ -51,6 +54,7 @@ a {
         color: #d1d1d1;
     }
 }
+
 .content {
     position: relative;
     width: 1024px;
@@ -59,13 +63,14 @@ a {
     border-radius: 5px;
     box-shadow: 0 0 15px #c0c0c0;
     overflow: hidden;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     @media screen and (max-width: 1024px) {
         width: 100%;
         margin: 0;
         border-radius: 0;
     }
 }
+
 .content-hd {
     padding: 30px 50px;
     color: #fff;
@@ -74,6 +79,7 @@ a {
     @media screen and (max-width: 720px) {
         padding: 25px;
     }
+
     .title {
         padding-bottom: 5px;
         margin-bottom: 5px;
@@ -82,25 +88,29 @@ a {
         font-weight: 300;
         overflow: hidden;
     }
-    .name,
-    .job,
+
+    .contact,
     .info,
-    .contact {
+    .job,
+    .name {
         width: 50%;
         @media screen and (max-width: 720px) {
             width: 100%;
             text-align: center;
         }
     }
-    .name,
-    .info {
+
+    .info,
+    .name {
         float: left;
     }
-    .job,
-    .contact {
+
+    .contact,
+    .job {
         float: right;
         text-align: right;
     }
+
     .name {
         h1 {
             font-family: @font-family-title;
@@ -111,6 +121,7 @@ a {
                 letter-spacing: 0;
                 line-height: 1.25;
             }
+
             small {
                 padding-left: 10px;
                 font-size: 24px;
@@ -125,10 +136,12 @@ a {
             }
         }
     }
+
     .job {
         @media screen and (max-width: 720px) {
             text-align: center;
         }
+
         h2 {
             display: inline-block;
             font-size: 24px;
@@ -139,43 +152,53 @@ a {
             }
         }
     }
+
     .info {
         padding-left: 5px;
         line-height: 30px;
+
         h2 {
             margin: 8px 0 4px;
             font-size: 18px;
         }
+
         h3 {
             font-size: 16px;
         }
     }
+
     .contact {
         padding-right: 5px;
+
         ul {
             margin: 8px 0 4px;
             @media screen and (max-width: 720px) {
                 margin: 16px 0 0;
                 text-align: center;
             }
+
             > li {
                 height: 22px;
                 @media screen and (max-width: 720px) {
                     display: inline-block;
                 }
+
                 > a {
                     font-family: @font-family-title;
                     font-size: 14px;
                     line-height: 22px;
                     color: #fff;
+
                     &:hover {
                         color: #e8e8e8;
                     }
+
                     .contact-link {
                         @media screen and (max-width: 720px) {
                             display: none;
                         }
                     }
+
                     .iconfont {
                         margin-left: 6px;
                         @media screen and (max-width: 720px) {
@@ -187,6 +210,7 @@ a {
         }
     }
 }
+
 .content-bd {
     min-height: 200px;
     padding: 20px 30px 50px;
@@ -194,6 +218,7 @@ a {
     @media screen and (max-width: 720px) {
         padding: 20px 15px 50px;
     }
+
     .content-left,
     .content-right {
         width: 50%;
@@ -201,25 +226,31 @@ a {
             width: 100%;
         }
     }
+
     .content-left {
         float: left;
     }
+
     .content-right {
         float: right;
     }
+
     section {
         padding: 10px 15px;
         overflow: hidden;
     }
+
     .section-hd {
         position: relative;
         height: 32px;
         margin: 10px auto 5px;
         overflow: hidden;
     }
+
     .section-bd {
         overflow: hidden;
     }
+
     .section-title-l,
     .section-title-r {
         display: inline-block;
@@ -230,12 +261,15 @@ a {
         border-top: 1px solid #ededed;
         vertical-align: middle;
     }
+
     .section-title-l {
         left: 0;
     }
+
     .section-title-r {
         right: 0;
     }
+
     .section-title {
         position: relative;
         z-index: 1;
@@ -248,18 +282,22 @@ a {
         text-align: center;
         background-color: #eee;
     }
+
     .section-list {
         padding: 10px 0 5px;
     }
+
     .item-hd {
         position: relative;
         padding: 10px 0 5px;
         font-weight: 500;
         line-height: 20px;
         overflow: hidden;
+
         .iconfont {
             color: @color-main;
         }
+
         .item-time {
             float: left;
             display: inline-block;
@@ -269,6 +307,7 @@ a {
                 margin-bottom: 5px;
             }
         }
+
         .item-more {
             float: right;
             margin-left: 5px;
@@ -279,21 +318,26 @@ a {
                 margin-top: 1px;
             }
         }
+
         .item-name {
             float: left;
             display: inline-block;
         }
     }
+
     .item-bd {
         margin-bottom: 5px;
     }
+
     .section-content {
         line-height: 22px;
         text-align: justify;
         word-break: break-all;
+
         .iconfont {
             color: @color-main;
         }
+
         em {
             display: inline-block;
             font-family: Menlo, @font-family;
@@ -305,6 +349,7 @@ a {
             padding: 0 3px;
             background-color: #f7f7f7;
         }
+
         strong {
             font-family: @font-family;
             font-size: 12px;
@@ -318,16 +363,19 @@ a {
             background-color: #f6f6f6;
         }
     }
+
     .skill {
         .section-content {
             margin-bottom: 5px;
             line-height: 24px;
         }
+
         strong {
             display: inline;
             line-height: 18px;
         }
     }
+
     .practice {
         .item-time {
             width: 32%;
@@ -336,10 +384,12 @@ a {
             }
         }
     }
+
     .prize {
         .item-hd {
             padding: 12px 0 0;
         }
+
         .item-time {
             width: 15%;
             @media screen and (max-width: 720px) {
@@ -348,6 +398,7 @@ a {
         }
     }
 }
+
 .btn {
     display: inline-block;
     padding: 0 5px;
@@ -358,11 +409,13 @@ a {
     line-height: 18px;
     text-align: center;
     color: @color-main;
+
     &:hover {
         color: #fff;
         background-color: @color-main;
     }
 }
+
 .pdf {
     display: inline-block;
     position: fixed;
@@ -382,19 +435,24 @@ a {
         margin-left: 0;
     }
 }
+
 footer {
     text-align: center;
+
     &.github-footer {
         display: block;
     }
+
     &.print-footer {
         display: none;
     }
+
     .footer-link {
         display: inline-block;
         margin-top: 10px;
         margin-bottom: 30px;
         color: #d1d1d1;
+
         .iconfont {
             vertical-align: middle;
             margin-right: 2px;
@@ -412,27 +470,33 @@ footer {
     width: 3px;
     height: 3px;
 }
+
 ::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, .2);
     background-clip: padding-box;
     min-height: 15px;
     box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
 }
+
 ::-webkit-scrollbar-thumb:vertical:hover {
     background-color: rgba(0, 0, 0, .3);
 }
+
 ::-webkit-scrollbar-thumb:vertical:active {
     background-color: rgba(0, 0, 0, .5);
 }
+
 ::-webkit-scrollbar-button {
     height: 0;
     width: 0;
 }
+
 ::-webkit-scrollbar-track {
     background-clip: padding-box;
     border: solid transparent;
     border-width: 0 0 0 4px;
 }
+
 ::-webkit-scrollbar-corner {
     background: transparent;
 }
@@ -440,4 +504,3 @@ footer {
 ::selection {
     background: #d1d1d1;
 }
-
