@@ -11,4 +11,4 @@ Fork或借鉴请注明出处 [@ Cong Min](https://congm.in) . Thx
 
 > chrome浏览器 - "打印" - 设置无边距 - 即可导出
 
-![琚致远-简历](https://staticfile.shaoyaoju.org/20180531/resume.png)
+![琚致远-简历](./resume.png)
